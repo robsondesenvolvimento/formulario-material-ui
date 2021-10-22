@@ -9,7 +9,7 @@ export default function HeaderApp() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography variant="h5" component="h5" sx={{ flexGrow: 1 }}>
+          <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             Formulário de cadastro
           </Typography>
         </Toolbar>

@@ -4,6 +4,8 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button'
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 
 const dadosEntrega = {
     nome: "",
@@ -39,31 +41,31 @@ function FormEntregaApp(){
             <Grid container spacing={2} sx={{ mt: 5 }}>
 
                 <Grid item sm={4}>
-                    <TextField label="Nome" variant="outlined" name="nome" fullWidth onChange={ handleChange } value={dadosEntrega.nome} />
+                    <TextField label="Nome" variant="outlined" name="nome" required fullWidth onChange={ handleChange } value={fields.nome} />
                 </Grid>
 
                 <Grid item sm={8}>
-                    <TextField label="Sobrenome" variant="outlined" name="sobrenome" fullWidth onChange={ handleChange } value={dadosEntrega.sobrenome} />
+                    <TextField label="Sobrenome" variant="outlined" name="sobrenome" fullWidth onChange={ handleChange } value={fields.sobrenome} />
                 </Grid>
 
                 <Grid item sm={12}>
-                    <TextField label="CPF" variant="outlined" name="cpf" fullWidth onChange={ handleChange } value={dadosEntrega.cpf} />
+                    <TextField label="CPF" variant="outlined" name="cpf" helperText="Insira o CPF sem separadores" required fullWidth onChange={ handleChange } value={fields.cpf} />
                 </Grid>
 
-                <Grid item sm={5}>
-                    <TextField label="Endereço" variant="outlined" name="endereco" fullWidth onChange={ handleChange } value={dadosEntrega.endereco} />
+                <Grid item sm={4}>
+                    <TextField label="Endereço" variant="outlined" name="endereco" fullWidth onChange={ handleChange } value={fields.endereco} />
                 </Grid>
 
                 <Grid item sm={3}>
-                    <TextField label="Cidade" variant="outlined" name="cidade" fullWidth onChange={ handleChange } value={dadosEntrega.cidade} />
+                    <TextField label="Cidade" variant="outlined" name="cidade" fullWidth onChange={ handleChange } value={fields.cidade} />
                 </Grid>
 
                 <Grid item sm={2}>
-                    <TextField label="Estado" variant="outlined" name="estado" fullWidth onChange={ handleChange } value={dadosEntrega.estado} />
+                    <TextField label="Estado" variant="outlined" name="estado" fullWidth onChange={ handleChange } value={fields.estado} />
                 </Grid>
 
-                <Grid item sm={2}>
-                    <TextField label="CEP" variant="outlined" name="cep" fullWidth onChange={ handleChange } value={dadosEntrega.cep} />
+                <Grid item sm={3}>
+                    <TextField label="CEP" variant="outlined" name="cep" helperText="Insira o CEP sem separadores" fullWidth onChange={ handleChange } value={fields.cep} />
                 </Grid>
 
                 <Grid item sm={12}>
